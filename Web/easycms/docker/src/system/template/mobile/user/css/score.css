@@ -1,0 +1,21 @@
+.panel-section {margin-left:0px;margin-right:0px;background-color:#f1f1f1}
+.panel-heading {margin-left:5px}
+.panel-heading.spacing{margin-bottom:12px}
+.panel-body {background-color:#fff}
+.table>thead>tr>th {border-bottom:0px}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {padding:5px;border-top:0px}
+.tag-block {margin:12px;background:#fff}
+.tag-block > .tag {width:100%;overflow:hidden} 
+.tag-block > .tag > img {float:left}
+.tag-block > .tag > .tag-body {width:100%;height:40px;padding-left:12px;display:block}
+.tag-block > .tag > .tag-body > .tag-title {float:left}
+.tag-block > .tag > .tag-body > .tag-right {float:right}
+.tag-block.user-score {margin:0px}
+.tag-block.user-score > .tag > .tag-body {padding-left:0px}
+.tag-block.user-score > .tag > .tag-body > .tag-title > div {color:#333;font-size:1.7rem}
+.tag-block.user-recharge {margin:0px;height:74px;padding:12px 0px}
+.tag-block.user-recharge .btn-recharge {width:90px;height:3rem;line-height:3rem;border:1px solid #6F9AFE;color:#fff;background:linear-gradient(to right,#709BFE,#1B5AFF);float:right;text-align:center;margin-top:8px;margin-right:15px}
+.tag-score {width:90px;float:left;text-align:center}
+.tag-score.keepleft {margin-right:10px}
+.score-number {height:30px;line-height:30px;font-size:3rem;font-weight:600}
+.score-title {height:20px;line-height:20px;color:#999;margin-top:4px}

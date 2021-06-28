@@ -1,0 +1,60 @@
+.card-heading .pull-right {line-height: 1;}
+
+body{
+    background-color:#F8F8F8;
+}
+
+.panel-company {
+    margin: 12px  12px;
+    padding: 13px 10px;
+}
+
+.panel-company .more {
+    font-size: 12px;
+    color: #999999;
+}
+
+.panel-company .block-title {
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.panel-company .vertical-center {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+
+.panel-company .vertical-start {
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-start;
+}
+
+.panel-company .vertical-line {
+    float: left;
+    width: 2px;
+    height: 14px;
+    background: #3C77FE;
+}
+
+.panel-company .block-title-text {
+    font-size: 16px;
+    margin-left: 3px;
+}
+
+.panel-company .company-desc .title {
+    font-size: 14px;
+}
+
+.panel-company .company-desc .desc {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.panel-company .contact strong {
+    display: block;
+    width: 54px;
+    line-height: 27px;
+}

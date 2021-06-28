@@ -1,0 +1,33 @@
+.tag-block {margin:12px;background:#fff}
+.tag-block > .tag {width:100%;height:40px;line-height:40px;padding:0px 12px} 
+.tag-block > .tag > img {float:left}
+.tag-block > .tag > .tag-body {width:100%;height:40px;padding-left:12px;display:block}
+.tag-block > .tag > .tag-body > .tag-title {float:left}
+.tag-block > .tag > .tag-body > .tag-right {float:right}
+
+.tag-block.user-image {margin:0px;height:90px;padding:15px 0px}
+.tag-block.user-image > .tag {height:60px;line-height:60px}
+.tag-block.user-image > .tag > .tag-body {height:60px;padding-left:72px}
+.tag-block.user-image > .tag > .tag-body > .tag-title {padding:5px 0px 5px 1px}
+.tag-block.user-image > .tag > .tag-body > .tag-title > div {height:25px;line-height:25px;color:#999;font-size:1.5rem;font-weight:400}
+.tag-block.user-image > .tag > .tag-body > .tag-title > div:first-child {color:#333;font-size:1.8rem;font-weight:600}
+.tag-block.user-image > .tag > img {height:60px;width:60px}
+
+.tag-block.user-score {margin:0px}
+.tag-block.user-score > .tag > .tag-body {padding-left:0px}
+.tag-block.user-score > .tag > .tag-body > .tag-title > div {color:#333;font-size:1.7rem}
+
+.tag-block.user-recharge {margin:0px;height:74px;padding:12px 0px}
+.tag-block.user-recharge > .tag {height:50px;line-height:50px}
+.tag-block.user-recharge .btn-recharge {width:87px;height:30px;line-height:30px;border:1px solid #6F9AFE;color:#fff;background:linear-gradient(to right,#709BFE,#1B5AFF);float:right;text-align:center;margin-top:10px;margin-right:15px}
+
+.tag-score {width:90px;float:left;text-align:center}
+.tag-score.keepleft {margin-right:10px}
+.score-number {height:30px;line-height:30px;font-size:3rem;font-weight:600}
+.score-title {height:20px;line-height:20px;color:#999}
+
+.user-control-nav {margin-top:1.2rem}
+.user-control-nav > li {border:none}
+.user-control-nav > li > a {font-size:1.7rem;border:none;text-align:left}
+.user-control-nav > li > a > i {width:15px;display:block;float:left;margin-right:10px;text-align:center}
+.user-control-nav > li > a > .icon-chevron-right {float:right;color:#ddd;margin-top:2px}

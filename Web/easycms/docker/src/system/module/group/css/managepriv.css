@@ -1,0 +1,14 @@
+.form-condensed select.form-control {height:250px}
+form .nav-tabs > li.active > a{font-weight:bold;}
+form .nav-tabs > li > a{outline:none;}
+form .nav{border-bottom:1px #ddd solid;}
+form .nav > li {float:left}
+.group-item {display:block; width:200px; float:left; font-size: 14px}
+
+.main-panel .table-bordered {border-top: 1px solid #ddd; border-bottom: 1px solid #ddd}
+.main-panel .panel-footer {border-top: none;}
+.main-panel .panel-heading {}
+.panel-group {border: none; margin-top: 20px;}
+
+.checkbox-inline.pad-right {padding-left: 0; padding-right: 20px;}
+.checkbox-inline.pad-right > input[type=checkbox] {right: 2px; top: 3px; margin: auto}

@@ -1,0 +1,10 @@
+version: "2"
+services:
+  web1:
+    build:
+      context: ./xssbot
+    ports:
+      - "8005:80"
+    tty: True
+    environment:
+      - FLAG=gkctf{test}

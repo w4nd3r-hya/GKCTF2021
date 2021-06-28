@@ -1,0 +1,59 @@
+.row-main{background:#efefef;}
+.component{margin:0 20px;}
+.component .panel-heading{background:#fff;}
+
+#setLogo .row-logo .col-md-6 .box{border: 1px solid #DDD; height:200px; text-align:center;}
+#setLogo .row-logo .card{text-align:center;padding-top:30px; border:none; height:150px;}
+#setLogo .row-logo .text-lg{line-height:90px;}
+#setLogo .row-logo .card a, .row-logo .card .icon-spin{line-height:80px;}
+#setLogo .row-logo a{text-decoration: none; outline: none;}
+#setLogo .row-logo img.logo{height:80px;}
+#setLogo .row-logo img.favicon{max-height:64px;}
+#setLogo .row-logo .actions{position:absolute; right:20px;top:10px;}
+#setLogo .row-logo .text-important{margin:0 auto;}
+
+#slide .card {margin-bottom: 10px;}
+#slide .card-slide {overflow: visible;}
+#slide .card-heading{color: #808080; height: 37px; padding: 7px; position: relative}
+#slide .plain-slide {height: 190px; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); transition: box-shadow .2s;}
+#slide .slides-holder {height: 200px; position: relative; background-color: #fff; margin: 0 auto;}
+#slide .slide-item {width: auto; max-height: 170px; position: absolute; bottom: 10px; right: 10px; width: 100%; padding-left: 45px; padding-right: 5px; transition: bottom .2s, right .2s; overflow: hidden;}
+#slide .slide-item img {max-height: 170px; max-width: 100%; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); transition: box-shadow .2s;}
+#slide .slide-item-1 img {width: 100%; max-height: none}
+#slide .card:hover .slide-item img, .card:hover .plain-slide {box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);}
+#slide .empty-holder{height: 190px; position: absolute; bottom: 0; width: 100%; text-align: center; background-color: #FBFBFF; color: #999;}
+#slide .empty-holder > .icon {display: block; margin-top: 60px; margin-bottom: 10px;}
+#slide .slides-count {position: absolute; opacity: .8; background-color: #000; background-color: rgba(0,0,0,.7); color: #fff; line-height: 24px; height: 24px; padding: 0 10px 0 20px; right: 5px; bottom: 0; z-index: 25; background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(246,246,246,0) 0%, rgba(0,0,0,0.69) 100%);background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(0%, rgba(246,246,246,0)), color-stop(100%, rgba(0,0,0,0.69)));background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(246,246,246,0) 0%, rgba(0,0,0,0.69) 100%);background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(246,246,246,0) 0%, rgba(0,0,0,0.69) 100%);background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(246,246,246,0) 0%, rgba(0,0,0,0.69) 100%);background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(246,246,246,0) 0%, rgba(0,0,0,0.69) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=1 );}
+#slide .create-btn:hover,.empty-holder:hover {color: #347AEB;}
+#slide #toBeAdded{font-size: 14px;}
+#slide .group-name{color:#333;}
+#slide #input{height: 22px;}
+#slide #removeGroup{text-align: right;}
+#slide .edit-form {position: absolute; top: 0; left: 0; background: #fff; padding: 0 15px 0 25px; display: none}
+#slide .edit-form .input-group-btn.fix-border  .btn {border-radius: 0}
+#slide .edit-form .input-group-btn + .input-group-btn .btn {border-radius: 0 3px 3px 0}
+#slide .edit-form .input-group-btn {white-space: }
+
+#setting .form-control.fix-border {border-right: 0; border-left: 0}
+#setting #mainPanel .panel-heading {padding: 4px 5px 0 5px}
+#setting #mainPanel .nav-tabs {margin-bottom: -1px}
+#setting #mainPanel .nav-tabs > li > a {padding: 5px 10px 8px}
+#setting #mainPanel .nav-tabs > li > a.active, #mainPanel .nav-tabs > li > a.focus {outline: none;}
+#setting #mainPanel .nav-tabs > li.active > a {padding: 6px 10px 7px; color: #333; font-weight: bold;}
+#setting .table.table-form td.watermark-content{padding-right: 0;}
+#setting .table.table-form td.watermark-attribute{padding-left: 0; padding-right: 0;}
+#setting .colorplate{padding: 0; border: none;}
+#setting .color-tile {display: block; float: left; width: 30px; height: 30px; border-radius: 4px; border: 1px solid #ccc; margin: 2px 2px 0 0; cursor: pointer; transition: all 0.4s; text-align: center; line-height: 30px;}
+#setting .color-tile:hover, .color-tile.active {border-color: #333; box-shadow: 0 1px 4px rgba(0,0,0,0.5)}
+#setting .color .icon-ok, .color .icon-question {display: none}
+#setting .color.active > .icon-ok, .color.error > .icon-question, .color.active .input-group-btn > .dropdown-toggle > .icon-ok, .color.error .input-group-btn > .dropdown-toggle > .icon-question {display: inline;}
+#setting .color.active.error .icon-ok {display: none}
+#setting .color .input-group-addon {min-width: 40px; text-align: center; border-radius: 0;}
+#setting .input-group-btn > .dropdown-toggle {border-radius: 0;}
+#setting .input-group-addon .checkbox-inline {padding-top: 0;}
+#setting .dropdown-menu.colors {padding: 3px; width: 169px}
+#setting .dropdown-menu.buttons {padding: 5px; padding-bottom: 0;}
+#setting .dropdown-menu.buttons > li {margin-bottom: 5px;}
+#setting #settingForm .form-footer{padding: 10px 10px 10px 127px;}
+#setting #settingForm .table, #watermarkTab .alert-danger{margin-bottom: 0;}
+#setting .watermark-footer, .thumb-footer{display: inline-block;}

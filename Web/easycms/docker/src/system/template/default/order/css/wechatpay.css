@@ -1,0 +1,10 @@
+.panel-heading .panel-actions{line-height: 30px; color: #f76120; font-weight: bold; margin-right: 0;}
+.wechat{border-right: solid 1px #eee;}
+.wechat .title{line-height: 30px; margin-bottom: 18px; text-align: center; font-size: 24px; color: #333;}
+.wechat .qrcode{width:307px; height:270px; margin:0 auto; box-shadow: 0 10px 20px #f9f9f9;}
+.wechat .qrcode-img{float:left;}
+.wechat .qrcode-img img{border: 1px solid #ddd; width:266px; height:270px;}
+.wechat .qrcode-warning{float: left; width: 40px; height: 270px; background: url(/theme/default/common/images/wechatpay.png) 0 -369px;}
+.wechat .tip{width: 180px; height: 40px; line-height: 20px; margin: 26px auto 28px; padding-left: 42px; position: relative; zoom: 1;}
+.wechat .tip .icon{height: 32px; width: 32px; position: absolute; left: 0; top: 4px; background: url(/theme/default/common/images/wechatpay.png) 0 -337px;}
+.mobile .img{width: 270px; height: 337px; margin: 0 auto; background: url(/theme/default/common/images/wechatpay.png);}

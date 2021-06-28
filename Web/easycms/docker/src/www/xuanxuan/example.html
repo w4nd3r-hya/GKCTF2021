@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>喧喧迷你版测试</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/zui@1.8.1/dist/css/zui.min.css">
+</head>
+
+<body>
+    <div style="padding: 30px; text-align: center;">
+        <button type="button" id="chatBtn" class="btn btn-primary"><i class="icon icon-comment"></i> 点击开始聊天</button>
+    </div>
+
+    <div class="container">
+        <div class="article-content">
+            <h1>喧喧浏览器端 Mini 版</h1>
+<p>喧喧浏览器端 Mini 版用于将喧喧嵌入到其他页面进行显示，在任意页面通过调用 JS 显示一个喧喧聊天窗口供用户使用。</p>
+<h2>开发环境搭建</h2>
+<p>基础开发环境搭建参考喧喧官方客户端环境搭建文档。</p>
+<p>如果是第一次搭建开发环境，需要将喧喧官方项目源码拷贝到 <code>xuanxuan/</code> 文件夹下，如果安装有 git，只需要执行：</p>
+<pre><code class='language-shell' lang='shell'>$ git clone https://github.com/easysoft/xuanxuan.git
+</code></pre>
+<p>如果不是第一次搭建开发环境，但需要同步官方项目源码，只需要执行：</p>
+<pre><code class='language-shell' lang='shell'>$ git pull
+</code></pre>
+<h2>打包</h2>
+<p>在命令行窗口执行：</p>
+<pre><code class='language-shell' lang='shell'>$ npm run package
+</code></pre>
+<p>最终生成的部署包在 <code>relase/xuanxuan-mini-*</code> 文件夹下。</p>
+<h2>前端使用方法</h2>
+<p>参考一下步骤进行使用（假设最终部署包目录名称为 <code>xxc-mini</code>）：</p>
+<h3>第一步：在页面引入相关资源</h3>
+<pre><code class='language-html' lang='html'>&lt;script src=&quot;./xxc-mini/xxc-mini.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h3>第二步：启动喧喧弹出界面</h3>
+<p>使用 <code>startXuanxuan(options)</code> 方法启动弹出界面，其中 <code>options</code> 为启动参数。所有可用的参数如下示例：</p>
+<pre><code class='language-javascript' lang='javascript'>startXuanxuan({
+    // 喧喧页面地址，默认为 ‘./index.html’
+    web: './index.html',
+
+    // 要登录的服务器地址，必填项
+    server: 'https://demo.ranzhi.net',
+
+    // 要登录的账户，必填项
+    account: 'demo8',
+
+    // token，可以为密码 md5值，必填项
+    token: 'e10adc3949ba59abbe56e057f20f883e',
+
+    // 要开聊的聊天 GID，必填项
+    cgid: '4134e746-f808-ed24-eec9-ac5afe139b56',
+
+    // 聊天窗口 id，确保每个聊天窗口 id 值唯一性，如果指定为 null，则会自动创建一个，默认为 null
+    id: null,
+
+    // 是否禁用添加自带的样式，默认为 false，如果为 true 则需要自己设置窗口框架样式
+    noStyle: false,
+
+    // 界面所使用的语言
+    lang: 'zh-cn',
+
+    // 窗口宽度，默认 600px
+    width: '600px',
+
+    // 窗口高度，默认 500px
+    height: '500px',
+
+    // 是否在创建窗口后立即显示窗口，默认为 true
+    autoShow: true,
+
+    // 关闭按钮上显示的提示文本，默认为 “关闭”
+    closeText: '关闭',
+
+    // 折叠按钮上显示的提示文本，默认为 “收起”
+    collapseText: '收起',
+
+    // 展开按钮上显示的提示文本，默认为 “展开”
+    expandText: '展开',
+
+    // 点击关闭按钮是否提示，默认为 `true`
+    closeConfirm: true,
+
+    // 当用户点击关闭按钮时的提示文本，默认为 “要退出聊天吗？”
+    closeConfirmText: '要退出聊天吗？',
+
+    // 对话框上确定按钮上的文本，默认为 “确定”
+    confirmBtnText: '确定',
+
+    // 对话框上取消按钮上的文本，默认为 “取消”
+    cancelBtnText: '取消',
+
+    // 展开按钮上显示的内容，可以为 HTML，默认为 “↑”
+    expandBtnHtml: '↑',
+
+    // 折叠按钮上显示的内容，可以为 HTML，默认为 “–”
+    collapseBtnHtml: '–',
+
+    // 关闭按钮上显示的内容，可以为 HTML，默认为 "&times;" 
+    closeBtnHtml: '&times;',
+
+    // 聊天窗口 iframe 元素父级元素上添加的类名，默认为 ‘’
+    className: '',
+
+    // 要注入到聊天 iframe 窗口内的 CSS 样式，默认为 null，仅在同域下可用
+    injectCss: null,
+
+    // 设置运行时配置，默认为 null
+    config: null,
+
+    // 当用户重复登录时是否自动退出，默认为 false
+    exitOnKickoff: false,
+
+    // 当聊天iframe窗口加载完成时回调函数，默认为 null，仅在同域下可用
+    onLoad: function() {
+        console.log('onLoad');
+    },
+
+    // 当聊天界面渲染完成时回调函数，默认为 null，仅在同域下可用
+    onReady: function() {
+        console.log('onReady');
+    },
+
+    // 当接收到消息时的事件回调函数，默认为 null，仅在同域下可用
+    onNotice: function(notice) {
+        console.log('notice', notice);
+    },
+
+    // 当用户登录完成事件回调函数，默认为 null，仅在同域下可用
+    //     参数 user 为当前登录的用户信息
+    onUserLogin: function(user) {
+        console.log('login', user);
+    },
+
+    // 当用户退出事件回调函数，默认为 null，仅在同域下可用
+    //     参数 user 为当前退出的用户信息
+    //     参数 reason 退出原因，例如 'KICKOFF' 为重复登录导致退出
+    //     在此回调函数内返回 `'exit'` 则退出当前聊天窗口
+    onUserLogout: function(user, reason) {
+        console.log('logout', user, reason);
+        if (reason === 'KICKOFF') {
+            // 返回 'exit' 则直接退出聊天并关闭弹窗
+            return 'exit';
+        }
+    },
+});
+</code></pre>
+<p><code>startXuanxuan</code> 方法调用后会返回一个对象，该对象上有如下方法：</p>
+<ul>
+<li><code>element</code>: 聊天窗口iframe元素父级元素；</li>
+<li><code>id</code>: 聊天窗口元素 ID；</li>
+<li><code>exit()</code>: 关闭聊天窗口并退出；</li>
+<li><code>hide()</code>: 隐藏聊天窗口；</li>
+<li><code>show()</code>: 显示聊天窗口；</li>
+<li><code>minimize()</code>: 最小化（收起）聊天窗口；</li>
+<li><code>maximize</code>: 展开聊天窗口；</li>
+<li><code>toggleMinimize()</code>: 切换折叠或展开聊天窗口；</li>
+<li><code>contentWindow</code>：聊天窗口内部 <code>window</code> 对象（仅在同域下可用）。</li>
+
+</ul>
+<p>例如要在创建窗口后不自动显示，先最小化后再显示可以这样：</p>
+<pre><code class='language-javascript' lang='javascript'>var xxc = startXuanxuan({
+    web: &#39;./index.html&#39;,
+    server: &#39;https://demo.ranzhi.net&#39;,
+    account: &#39;demo8&#39;,
+    token: &#39;e10adc3949ba59abbe56e057f20f883e&#39;,
+    cgid: &#39;4134e746-f808-ed24-eec9-ac5afe139b56&#39;,
+
+    // 是否在创建窗口后立即显示窗口
+    autoShow: false
+});
+
+xxc.minimize();
+xxc.show();
+</code></pre>
+<h3>运行时配置</h3>
+<p>允许通过 <code>config</code> 配置项来重置应用运行时配置，所有可以重置的运行时配置参考 <a href='https://github.com/easysoft/xuanxuan/tree/master/xxc/app/config' target='_blank' class='url'>https://github.com/easysoft/xuanxuan/tree/master/xxc/app/config</a></p>
+<p>例如自定义 Emojione 图片 CDN 地址：</p>
+<pre><code class='language-javascript' lang='javascript'>startXuanxuan({
+    config: {
+        media: {
+            &#39;emojione.imagePathPNG&#39;: &#39;//cdn.jsdelivr.net/emojione/assets/4.0/png/128/&#39;
+        }
+    }
+});
+</code></pre>
+<p>也可以通过 config 配置项的 <code>lang</code> 字段覆盖界面语言项，例如重新设置输入框上用户不在线时的提示文本：</p>
+<pre><code class='language-javascript' lang='javascript'>startXuanxuan({
+    config: {
+        lang: {
+            &#39;zh-cn&#39;: {
+                &#39;chat.sendbox.placeholder.memberIsOffline&#39;: &#39;{0} 不在线，稍后再聊了&#39;
+            }
+        }
+    },
+});
+</code></pre>
+<p>所有可以配置的语言项参考 <a href='https://github.com/easysoft/xuanxuan/blob/master/xxc/app/lang/zh-cn.json' target='_blank' class='url'>https://github.com/easysoft/xuanxuan/blob/master/xxc/app/lang/zh-cn.json</a></p>
+        </div>
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/zui@1.8.1/dist/lib/jquery/jquery.js"></script>
+    <script src="./xxc-mini.js"></script>
+    <script>
+        $(function () {
+            $('#chatBtn').on('click', function () {
+                // 启动喧喧对话框
+                var xxc = startXuanxuan({
+                    // 喧喧页面地址
+                    web: './index.html',
+
+                    // 要登录的服务器地址
+                    server: 'https://demo.ranzhi.net',
+
+                    account: 'demo6',
+
+                    // token，可以为密码 md5值
+                    token: 'e10adc3949ba59abbe56e057f20f883e',
+
+                    // 要开聊的聊天 GID
+                    cgid: '10&7',
+
+                    lang: 'en',
+
+                    expandBtnHtml: '<i class="icon-chevron-up" style="position: relative; top: -2px"></i>',
+
+                    collapseBtnHtml: '<i class="icon-chevron-down" style="position: relative; top: -2px"></i>',
+
+                    // injectCss: '.app-chat-sendbox .app-chat-drafteditor {background: red!important}',
+
+                    config: {
+                        lang: {
+                            'zh-cn': {
+                                'chat.sendbox.placeholder.memberIsOffline': '{0} 不在线，稍后再聊了'
+                            }
+                        }
+                    },
+
+                    onNotice: function (notice) {
+                        console.log('notice', notice);
+                    },
+
+                    onReady: function () {
+                        console.log('onReady');
+                    },
+
+                    onLoad: function () {
+                        console.log('onLoad');
+                    },
+
+                    // 当用户登录完成事件回调函数，默认为 null，仅在同域下可用
+                    onUserLogin: function(user) {
+                        console.log('login', user);
+                    },
+
+                    // 当用户退出事件回调函数，默认为 null，仅在同域下可用
+                    onUserLogout: function(user, reason, unexpected) {
+                        console.log('logout', user, reason, unexpected);
+                    },
+                });
+
+                console.log('xxc', xxc);
+            })
+        });
+    </script>
+</body>
+
+</html>

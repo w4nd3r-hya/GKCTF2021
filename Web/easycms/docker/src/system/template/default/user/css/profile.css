@@ -1,0 +1,6 @@
+#profileTable {border:none;}
+#profileTable tr:first-child td, #profileTable tr:first-child th{border-top:none;}
+#profileTable tr th:first-child, #profileTable tr td:first-child{border-left:none;}
+#profileTable tr th:last-child, #profileTable tr td:last-child{border-right:none;}
+#profileTable tr:last-child td, #profileTable tr:last-child th{border-bottom:none;}
+#profileTable th, #profileTable td{padding: 10px 8px;}

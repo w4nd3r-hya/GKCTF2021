@@ -1,0 +1,125 @@
+/* Override default style */
+body {font-family: 'Helvetica Neue',Helvetica,'Microsoft Yahei','PingFang SC','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif; background: #f5f5f5;}
+
+/* Helper classes */
+.text-muted,
+input::placeholder {color: #CBCBCB;}
+
+/* Logo in appbar */
+.appbar {height: 40px; transition: all .4s;}
+.appbar-actions, .appbar-title {padding: 0 4px;}
+.appbar-title {text-align: center; padding: 0;}
+.appbar-title > a {line-height: 40px; height: 40px; display: block;}
+.appbar-actions {height: 40px;}
+.appbar-actions .btn {min-width: 30px; height: 40px; line-height: 38px; padding: 0;}
+#logo h4, #logo img {font-weight: bold; margin: 0; display: inline-block; line-height: 40px; position: relative; transition: left .5s; left: 0;}
+
+/* Search bar in header */
+.appbar .search-bar {position: fixed; left: 0; top: 0; right: 0; z-index: 5000; bottom: 0; display: none;}
+.appbar .search-bar.show {display: block;}
+.search-bar-back {position: absolute; top: 40px; left: 0; right: 0; bottom: 0;}
+.search-bar-control {display: block; position: relative; margin: 0 10px; padding: 10px 0; background: #fff;}
+.search-bar-control > .form-control {box-shadow: 0 0 5px rgba(0,0,0,.1); height: 30px; line-height: 20px; padding: 5px 8px 5px 30px; border-radius: 6px; box-sizing: border-box; border-color: #f1f1f1; transition: box-shadow .2s;}
+.search-bar-control > .form-control:focus {box-shadow: 0 4px 20px 0 rgba(153,153,153,0.20); border-color: #eee;}
+.search-bar-control > .icon-search {position: absolute; left: 2px; top: 10px; width: 28px; height: 28px; line-height: 28px; text-align: center;}
+.search-bar-control > .btn-clear {position: absolute; right: 0; top: 9px; width: 28px; height: 28px; line-height: 26px; text-align: center; opacity: 0; transition: opacity .2s;}
+.search-bar-control > .btn-clear > .icon {display: inline-block; width: 18px; height: 18px; border-radius: 50%; line-height: 16px; background: #CBCBCB; color: #fff;}
+.search-bar-control > .form-control:valid + .btn-clear {opacity: 1;}
+
+/* UI for appnav and appbar when scroll */
+body.with-appnav.with-appbar-top {padding-top: 80px;}
+body.with-appnav.with-appbar-top .appnav {top: 40px;}
+body.with-appnav.with-appbar-top.scroll-down-in .appnav.fix-top {top: 40px;}
+body.with-appbar-top.scroll-down-in .appbar.fix-top {top: 0;}
+body.with-appbar-bottom {padding-bottom: 51px;}
+
+/* Appnav in header */
+.appnav {background: #fff; border: none;}
+.appnav > .mainnav {margin: 0; padding: 0 4px; background: #fff;}
+.appnav > .mainnav > .nav > li > a.sub-open {background: none;}
+.appnav > .mainnav > .nav > li > a.sub-open > .icon-caret-down {color: #3C77FE;}
+.appnav > .mainnav > .nav > li > a {box-shadow: none; color: #999999; border-radius: 6px;}
+.appnav > .mainnav > .nav > li.active > a {box-shadow: none; position: relative; color: #3C77FE; font-size: 16px;}
+.appnav > .mainnav > .nav > li.active > a:before {content: ' '; display: block; position: absolute; right: 15px;; left: 15px; bottom: 6px; background-color: #3C77FE; height: 2px; border-radius: 2px; box-shadow: 0 2px 4px 0 rgba(78,129,254,0.20); background-image: linear-gradient(90deg,#1b60fe 10%,#709bfe 100%);}
+.appnav.show-sub .mainnav {box-shadow: 0 4px 8px 0 rgba(228,228,228,0.50), 0 1px 0 0 rgba(0,0,0,.02); position: relative; z-index: 10;}
+.appnav > .subnavs {background: #fff; border: none; margin: 0; font-size: 12px; padding: 5px 0; overflow-y: auto; box-shadow: 0 4px 8px 0 rgba(228,228,228,0.50), 0 1px 0 0 rgba(0,0,0,.02);}
+.appnav > .subnavs > .nav.show { display: flex!important; flex-wrap: nowrap; white-space: nowrap;}
+.appnav > .subnavs > .nav > li {padding: 4px;}
+.appnav > .subnavs > .nav > li > a {line-height: 18px; padding: 3px 8px; border-radius: 12px; color: #9a9a9a;}
+.appnav > .subnavs > .nav > li.active > a {background: #e0e9ff; box-shadow: none;}
+
+/* Appbar icons */
+.img-icon {display: inline-block; background: no-repeat 0 -20px url(/theme/mobile/common/img/navbar.png); background-size: 80px 40px; width: 20px; height: 20px;}
+.img-icon-message {background-position-x: -20px;}
+.img-icon-cart {background-position-x: -40px;}
+.img-icon-user {background-position-x: -60px;}
+
+/* Appbar in bottom */
+.appbar.fix-bottom {border-top: 1px solid #E5E5E5; height: 51px;}
+.appbar .nav-icons > li {width: 25%; padding: 2px;}
+.appbar .nav-icons > li > a {text-align: center; padding: 3px; color: #cdcdcd; border-radius: 6px;}
+.appbar .nav-icons > li > a > .img-icon {display: block; margin: 2px auto 4px;}
+.appbar .nav-icons > li > a > span {display: block; font-size: 12px; line-height: 14px;}
+.appbar .nav-icons > li.active > a > .img-icon {background-position-y: 0;}
+.appbar .nav-icons > li.active > a {color: #3C77FE;}
+
+/* Carousel */
+.carousel-inner > .item {border-radius: 4px}
+.carousel-indicators {left: 24px; margin: 0; bottom: 14px; text-align: left;}
+.carousel-indicators li {width: 4px; height: 3px; background: rgba(150,150,150,.85); border-radius: 1px; border: none; transition: all .4s; cursor: pointer;}
+.carousel-indicators li.active {width: 12px; background: #3C77FE;}
+.carousel-caption {left: 24px; text-align: left; font-size: 12px; text-shadow: none; bottom: 35px; right: 24px;}
+.carousel-caption > h2 {font-size: 14px;}
+.carousel-caption p {margin: 0 0 5px 0;}
+.carousel-caption ul {padding-left: 16px; margin-bottom: 5px;}
+.carousel-control {display: none;}
+
+/* Pager with pull-up-load-more UI */
+.pager-pull-up {color: #cdcdcd; text-align: center; font-size: 12px; margin-top: 8px;}
+.pager-pull-up-hint {transition: transform .2s; transform: scaleY(1)}
+.pager-pull-up-hint > .icon {transition: transform .2s; transform: scale(0); opacity: 0;}
+.page-loading .pager-pull-up-hint > .icon {transform: scale(1); opacity: 1;}
+.page-loading .pager-pull-up-hint > span {display: none;}
+.pager-pull-up-fixed {position: fixed; bottom: 60px; width: 100%; text-align: center; pointer-events: none;}
+.pager-pull-up-label {display: inline-block; border-radius: 3px; background: rgba(0,0,0,.5); color: #fff; line-height: 20px; padding: 2px 8px; font-size: 12px;}
+
+/* Panel */
+.panel, .panel-section {border-radius: 4px; border: none; background: #fff; margin-bottom: 12px;}
+.panel > .panel-heading, .panel-section > .panel-heading {background: #fff; line-height: 16px; border-radius: 4px 4px 0 0; border-bottom: none; padding: 12px 10px;}
+.panel > .panel-heading > strong {font-size: 16px; position: relative; line-height: 16px; display: inline; padding-left: 6px; border-left: 2px solid #3C77FE;}
+.panel > .panel-heading > strong > .icon {display: none;}
+.panel-block.with-cards .panel-heading {margin-bottom:0px}
+.panel-heading > .strong {font-size: 16px; position: relative; line-height: 16px; display: inline; padding-left: 6px; border-left: 2px solid #3C77FE;}
+
+/* Panel section */
+.panel-section {margin: 12px;}
+
+/* Cards list */
+.cards.condensed {border: none;}
+.cards-list {padding: 0 10px;}
+.cards.condensed .card {padding: 12px 0; border-bottom-color: #D8D8D8;}
+.cards.condensed > .card:last-child {border: none;}
+.cards.condensed a.card:hover {background: none;}
+.card-heading > h5 {line-height: 22px;}
+.card-heading + .card-content {padding: 0; margin-top: 12px;}
+.card {display: flex;}
+.card-block {display: block;}
+.card-thumbnail {width: 116px; padding: 0 0 0 12px; flex: none;}
+.card-thumbnail img {width: 100%;}
+.card-content {color: #999}
+.card-wrapper {flex: auto; display: flex; flex-direction: column;}
+.card-wrapper > .card-heading {flex: auto;}
+.card-wrapper > .card-content {flex: none;}
+
+.cards-products {overflow:hidden;background-color:#fff}
+.cards-products > .row {margin-left:0px;margin-right:0px}
+.cards-products > .row > .col {padding-left:10px;padding-right:10px}
+.cards-products > .row > .col > .card{display:block;border:0px;box-shadow:0 0px 0px}
+.cards-products > .row > .col > .card .card-img-fixed{height:208px;display:block;overflow:hidden;background-color:#f1f1f1;position:relative}
+.cards-products > .row > .col > .card .card-img-fixed img {position:absolute;max-width:100%;margin:auto;left:0px;top:0px;right:0px;bottom:0px}
+.cards-products > .row > .col > .card .card-content{padding:12px 0px}
+.cards-products > .row > .col > .card .card-content > div:first-child{height:40px;overflow:hidden}
+.cards-products > .row > .col > .card .card-price{margin-top:6px}
+
+.appbar.fix-right {position:fixed;right:30px;bottom:140px;z-index:120;height:0px}
+.appbar.fix-right > a > img {width:60px;height:60px}

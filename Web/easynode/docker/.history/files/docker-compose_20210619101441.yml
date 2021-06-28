@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  web:
+    build: .
+    restart: always
+    ports:
+      - "9001:1337"
+    environment:
+      - FLAG=flag{test_flag}

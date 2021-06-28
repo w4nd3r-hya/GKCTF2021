@@ -1,0 +1,32 @@
+.alert-replies{margin: 15px 10px; background: #f1f1f1;}
+.alert-replies .reply-date{margin-right: 10px;}
+.alert-replies hr:last-child{display: none;}
+.reply-content+.article-files{margin-top: 8px;}
+.alert-replies .reply-content{display: inline;}
+.alert-replies > .second-replies{margin-left: 10px; margin-bottom: 10px; padding: 10px 10px 0; background: #fff;}
+.alert-replies .files-list > li.files-list-heading {display:none;}
+.thread {padding: 14px 12px; background-color: #ffffff;}
+.thread .hidden {display: none;}
+.thread .vertical-center {display: flex; display: -webkit-flex; align-items: center;}
+.thread .horizontal-center {display: flex; flex-direction: column; justify-content: center;}
+.thread .header .title {display: flex; align-items: flex-start;}
+.thread .header .title .stick {text-align: center; font-size: 12px; margin-left: 2px;}
+.thread .header .title .readonly {text-align: center; font-size: 12px; margin-left: 2px;}
+.thread .header .title h2 {margin: auto; width: 331px;}
+.thread .header .sub-content {display: flex; justify-content: space-between;}
+.thread .header .sub-content .author {margin-top: 12px;height: 32px;}
+.thread .header .sub-content .author img {border-radius: 3px; margin-right: 10px; width: 32px; height: 32px;}
+.thread .header .sub-content .author i {border-radius: 3px; margin-right: 10px; font-size: 40px; color: grey;}
+.thread .header .sub-content .operations .trigger {display: flex; height: 24px; border-radius: 1px; align-items: center; margin: auto 0; justify-content: center; vertical-align: middle;}
+.thread .header .sub-content .operations .trigger.active {background-color: #E6EDFF;}
+.thread .header .sub-content .operations .trigger .circle {background-color: #D8D8D8; width: 4px; height: 4px; margin: 0 3px;}
+.thread .header .sub-content .operations .trigger.active .circle {background-color: #3C77FE;}
+.thread .header .sub-content .operations .options {display: flex; flex-direction: column; line-height: 24px; margin-top: 6px; box-shadow: 0 0 8px #000000; background-color: #ffffff; font-size: 12px; padding: 6px 12px; min-width: 82px; border-radius: 3px; position: absolute; right: 12px;}
+.thread .authorName {color: #333333;font-size: 16px;}
+.thread .addedDate {color: #999999;font-size: 13px;}
+.thread .header .ext {display: flex; flex-direction: column; justify-content: space-between;}
+.thread .content {margin-top: 13px;}
+.thread .content .detail img {border-radius: 4px;}
+.thread .commentBox .panel {border-radius: 0;}
+.thread .commentBox .panel-section {margin: 0;}
+.thread .commentBox hr {border: none;}

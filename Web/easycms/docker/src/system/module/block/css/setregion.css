@@ -1,0 +1,58 @@
+.panel-heading > a { display: inline-block; margin: -3px 3px; line-height: 26px;padding: 0 10px}
+.panel-heading > a.active { border-radius: 13px; background-color: #3280FC;color: #fff}
+.panel-heading > ul.pull-left{list-style-type:none; font-weight:normal;}
+
+.layout-menu {min-width: 200px;}
+.layout-menu > li {position: relative;}
+.layout-menu > li > a {padding-right: 60px}
+.layout-menu > li.active > a, .layout-menu > li.active > a:hover, .layout-menu > li:hover, .layout-menu > li > a:hover {background-color: #ebf2f9; color: #333}
+.layout-menu > li.active > a {color: #145ccd}
+.layout-menu > li > .actions {position: absolute; right: 0; top: 0; opacity: 0}
+.layout-menu > li:hover > .actions {position: absolute; right: 0; top: 0; opacity: 1}
+.layout-menu > li > .actions > a {display: block; float: left; width: 26px; height: 26px; text-align: center; line-height: 26px;}
+.layout-menu > li > .actions > a:hover {background-color: rgba(0,0,0,0.1);}
+
+.page-panel{border: 1px solid #6999E0;}
+.page-panel .label{background: #6999E0; color: #FFF; font-weight: bold;}
+.page-panel .page-name{font-size: 15px; height: 30px; line-height: 30px;}
+.page-panel a.btn-region{border: solid 1px #ddd; padding: 3px;}
+.page-panel .label-system{background: #6999E0}
+.page-panel .label-content{background: #4caf50}
+.page-panel .label-product{background: #f57c00}
+.page-panel .label-feedback{background: #ef5350}
+
+.mgb-0 {margin-bottom: 0;}
+#blockList {padding: 5px 0;}
+#blockList .block-item {padding: 5px 0;}
+#blockList .block-item > .actions {line-height: 30px}
+#blockList .block-item > .actions i{padding: 0 3px;}
+#blockList .block-item  .icon-move {cursor: move; color: #666}
+#blockList .block-item.dragging {opacity: 0.35; background-color: #FFF4E5;}
+#blockList .block-item.drag-shadow {border: 1px solid #ddd; box-shadow:0 1px 8px rgba(0,0,0,.15); background-color: #fff; z-index: 9999}
+.children{margin-left: 20px; clear: both;}
+.block-item label{margin-right: 10px; font-weight: 400; margin-top: 2px}
+.block-item label input[type='checkbox']{margin: 8px 3px 0 0;}
+#blockList div.block-item {border: 1px solid #ccc; margin: 10px 5px; background-color: #f1f1f1; padding: 0; border-radius: 3px}
+.block-item .sort-handle {cursor: move; line-height: 32px}
+.block-item .col {float: left;}
+.block-item .form-control {border: none; border-radius: 0; border-right: 1px solid #DDD}
+.block-item .input-group-addon {border: none; border-radius: 0; background-color: #f1f1f1;}
+.block-item .col-type {width: 25%;}
+.block-item .col-grid {width: 20%;}
+.block-item .col-probability {width: 20%;}
+.block-item .col-style {width: 25%;}
+.block-item .col-actions {width: 22%;}
+.block-item .col-move {width: 8%;}
+.block-item .children {margin: 0; background-color: #fff; border-top: 1px solid #ccc; background-color: #ddd; padding: 10px 10px 10px 20px; width: 100%}
+.block-item .children:empty {display: none}
+#blockList > .block-item:first-child {margin-top: 0;}
+#blockList .block-item .children > .block-item {margin: -1px 0 0 0; border-radius: 0; overflow: hidden;}
+#blockList .block-item .children > .block-item:first-child {border-radius: 3px 3px 0 0; margin-top: 0;}
+#blockList .block-item .children > .block-item:last-child, #blockList .block-item .children > .block-item.drag-from {border-radius: 0 0 3px 3px}
+#blockList .block-item .children > .block-item .col-type {width: 23%;}
+#blockList .block-item .children > .block-item .col-grid {width: 21%;}
+#blockList .block-item .children > .block-item .col-probability {width: 21%;}
+#blockList .block-item .children > .block-item .col-style {width: 26%;}
+#blockList .block-item .children > .block-item .col-actions {width: 22%;}
+#blockList .block-item .children > .block-item .col-move {width: 8%;}
+#submit {margin-left: 5px;}

@@ -1,0 +1,7 @@
+version: '3'
+services:
+  web1:
+    image: dbapp/web_tomcat8_mysql_test
+    build: ./
+    ports:
+      - "8078:8080"

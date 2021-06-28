@@ -1,0 +1,6 @@
+.text-danger {color:#D0021B}
+.text-muted.text-line-through {color:#999999}
+.card:active, .card:hover {box-shadow:0 0px 0px}
+.cards > .row {margin-right:-10px;margin-left:-10px;float:none;width:100%}
+.media-placeholder {position:absolute;top:0px;bottom:0px;left:0px;right:0px;margin:auto}
+

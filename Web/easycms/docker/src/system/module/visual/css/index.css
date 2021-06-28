@@ -1,0 +1,38 @@
+#visualPanel {border-bottom: 1px solid #ddd; box-shadow: 0 1px 5px rgba(0,0,0,.124); background-color: #fafafa;}
+#visualPanel .nav > li > a.text-danger {color: red}
+
+#visualExitBtn {position: absolute; right: 15px; top: 9px}
+
+#visualPageWrapper {display: block; position: fixed; top: 40px; left: 0; right: 0; bottom: 0;}
+
+#pageLayoutSelector {display: none}
+#pageLayoutSelector > a {color: #fff; padding: 5px 8px!important; margin: 5px; background-color: #F1A325}
+#pageLayoutSelector > a:hover, #pageLayoutSelector > a:active, #pageLayoutSelector > a:focus {color: #fff!important; background-color: #e29923!important}
+#pageLayoutSelector .dropdown-menu > li > a {padding: 8px 15px 8px 15px; position: relative;}
+#pageLayoutSelector .dropdown-menu > li > a:hover,
+#pageLayoutSelector .dropdown-menu > li > a:hover > small {color: #fff}
+#pageLayoutSelector .dropdown-menu > li > a > .icon {position: absolute; right: 10px; top: 19px; display: none; color: #47A447}
+#pageLayoutSelector .dropdown-menu > li > a > small {display: block; margin-top: 2px;}
+#pageLayoutSelector .dropdown-menu > li.active > a {color: #47A447; background-color: #DDF4DF}
+#pageLayoutSelector .dropdown-menu > li.active > a > .icon {display: none}
+#pageLayoutSelector .dropdown-menu > li.active > a > small {color: grey}
+
+.nav-main {margin-left: -10px}
+
+#menu {margin: 0 auto; border-bottom: none; height: auto;}
+#menu .nav > li {padding: 0}
+#menu .nav > li > a {padding: 10px}
+#menu > .pull-right {margin-right: 0;}
+#menu .nav > li.nav-item-primary, #menu .nav > li.divider.angle {background-color: #fafafa;}
+#menu .nav > li.nav-item-primary + li.divider.angle:after, #menu .nav > li.divider.angle:after {border-left-color: #fafafa}
+
+#menu .menu-templates {display: none}
+#menu .menu-template-name, #menu .menu-template-name + .icon {display: none!important}
+#menu .theme-picker-toolbar {background-color: #eee}
+#menu .theme-picker-toolbar > .nav > li > a:hover {background-color: #fafafa; color: #145ccd}
+
+#visualPage {transition: width .2s;}
+.ve-device-mobile {background-color: #aaa}
+.ve-device-mobile #visualPage {width: 600px!important; margin: 0 auto; display: block;}
+
+

@@ -1,0 +1,34 @@
+input:focus, textarea:focus {outline: none;}
+.comments {margin-top: 12px;}
+.comments .comment {margin-bottom: 5px;}
+.comments .comment-heading {justify-content: space-between; height: 32px; margin: 16px 0;}
+.comments .comment-input {border-radius: 3px; border: 0; background-color: #F3F3F3; height: 30px; width: 243px; font-size: 12px;}
+.comments .comment-post {width: 100%; height: 50px; background-color: #ffffff; position: fixed; bottom: 50px; border: 1px solid #f8f8f8; padding: 0 10px;}
+.comments .comment-form {width: 100%; justify-content: space-between;}
+.comments .comment-form #submitComment {border-radius: 2px; background: linear-gradient(to left, #1B5AFF, #709BFE);; height: 30px; font-size: 14px; margin: auto; color: white; font-weight: bold; border: 0; padding: 8px 14px; line-height: 10px; text-align: center; vertical-align: middle;}
+.comments .comment-content {margin-left: 42px; word-break: break-all;}
+.comments .vertical-line {float: left; width: 2px; height: 14px; background: #3C77FE;}
+.comments .vertical-center {display: flex; display: -webkit-flex; align-items: center;}
+.comments .form-group {margin-bottom: 0;}
+.comments .comment-list {padding: 13px 12px; background-color: #FFFFFF;}
+.comments .message-list {padding: 1px 12px; background-color: #FFFFFF;}
+.comments .list-text {margin-left: 4px; font-size: 16px;}
+.comments .avatar img {border-radius: 3px; width: 32px; height: 32px;}
+.comments .avatar i {border-radius: 3px; font-size: 40px;}
+.comments .comment-ext {margin-left: 10px; display: flex; flex-direction: column; justify-content: space-between;}
+.comments .authorName {color: #333333; font-size: 14px;}
+.comments .addedDate {color: #999999; font-size: 13px;}
+.comments .reply-text {margin-top: -20px;}
+.comments .reply-text a {color: #999999; font-size: 12px;}
+.comments .replies {border-radius: 3px; margin: 8px 0 0 42px; background-color: #F0F0F0;}
+.comments .replies .arrow {display: inline-block; border-radius: 2px; width: 0; height: 0; margin: 0 4px; border-top: 4px solid transparent; border-bottom: 4px solid transparent; border-left: 6px solid gray;}
+.comments .replies .more-replies {font-size: 12px; color: #3C77FE; margin: 0 0 0 12px; height: 24px; width: 40%;}
+.comments .reply-panel {justify-content: space-between;}
+.comments .reply-panel .replies {border-radius: 0; margin: 0; background-color: #F0F0F0;}
+.comments .reply-panel .text-primary {color: #333333; font-size: 12px; display: flex; align-items: center;}
+.comments .reply-panel .text-muted {color: #999999; font-size: 12px;}
+.comments .reply-panel a {color: #999999; font-size: 12px;}
+.comments .reply-panel .reply-heading {margin: 0 12px 0 12px; justify-content: space-between; height: 30px;}
+.comments .reply-panel .reply-heading .reply-ext {display: inline-flex;}
+.comments .reply-panel .reply-heading .text-muted {margin-left: 12px;}
+.comments .reply-panel .reply-body {color: #676767; font-size: 12px; margin: 0 12px 5px 12px; word-break: break-all;}

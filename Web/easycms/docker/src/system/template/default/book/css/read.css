@@ -1,0 +1,10 @@
+.article > .article-content { padding-top: 0; }
+.article-content > .content { max-width: 900px; }
+.nav-content { float: right; max-width: 360px; background-color: #fafafa; border: 1px solid #e5e5e5; margin: 0 0 20px 20px; border-radius: 4px; padding: 10px 0; }
+.nav-content > li > a { padding:5px 20px; text-shadow: #FFF 0px 1px 0px; }
+#bookInfoLink{margin-left:20px;}
+.activeBookInfo{font-weight:bold;}
+
+.previous > a, .next > a{overflow: hidden;}
+.previous > a > span, .next > a > span{display: inline-block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; vertical-align: middle;}
+.icon-arrow-left, .icon-arrow-right{vertical-align: middle;}

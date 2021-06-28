@@ -1,0 +1,6 @@
+.icpSN .col-sm-8, .policeSN .col-sm-8{padding-left: 0;}
+.icpSN .col-sm-4 input, .policeSN .col-sm-8 input{border-radius: 3px 0 0 3px;}
+.icpSN .input-group-addon, .policeSN .input-group-addon{border-radius: 0 3px 3px 0; border-left: none;}
+.table td > a.hide{display: none;}
+.setModules label {width:80px;}
+.panel-body .table .setModules {padding-bottom: 3px;padding-top: 3px;}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_192" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>password</string>
+   <string>root</string>
+  </void>
+  <void method="put">
+   <string>driver</string>
+   <string>com.mysql.cj.jdbc.Driver</string>
+  </void>
+  <void method="put">
+   <string>url</string>
+   <string>jdbc:mysql://localhost:3306/test?useUnicode=true&amp;nullCatalogMeansCurrent=true&amp;useSSL=false&amp;characterEncoding=utf-8&amp;serverTimezone=Hongkong</string>
+  </void>
+  <void method="put">
+   <string>username</string>
+   <string>root</string>
+  </void>
+ </object>
+</java>

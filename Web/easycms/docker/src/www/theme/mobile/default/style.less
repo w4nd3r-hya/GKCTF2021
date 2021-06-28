@@ -1,0 +1,191 @@
+// mixins
+
+
+//vars
+@color-danger:        #ea644a;
+@color-secondary:     darken(@color-primary, 10%);
+@color-pale:          mix(#fff, @color-primary, 84%); // #E0E9FF;
+@color-priamry-hover: @color-secondary;
+@color-canvas:        #f5f5f5;
+@img-gradient:        linear-gradient(90deg, darken(@color-primary, 6.5%) 10%, lighten(@color-primary, 10.3%) 100%);
+
+.override-colorset(@color) when not(@color = #3280FC)
+{
+  // links
+  a {
+    &.primary, &.text-primary {
+      color: @color-primary;
+    }
+
+    &:hover,
+    &:focus {
+      color: @color-priamry-hover;
+    }
+  }
+
+
+  // type
+  .text-primary {color: @color-primary;}
+  .bg-primary {background-color: @color-primary;}
+  .bg-primary-pale {background-color: @color-pale;}
+
+
+  // button
+  .btn.primary {
+    background-color: @color-primary;
+  }
+  .btn.primary.active,.btn.primary.focus, .btn.primary:active, .btn.primary:focus, .btn.primary:hover, .open>.dropdown-toggle.btn.primary,
+  .btn.primary.active.focus, .btn.primary.active:focus, .btn.primary.active:hover, .btn.primary:active.focus, .btn.primary:active:focus, .btn.primary:active:hover, .open>.dropdown-toggle.btn.primary.focus, .open>.dropdown-toggle.btn.primary:focus, .open>.dropdown-toggle.btn.primary:hover {
+    background-color: darken(@color-primary, 5%);
+  }
+  .btn-link {
+    color: @color-primary;
+    &:hover,
+    &:focus {
+      color: @color-priamry-hover;
+      background-color: @color-pale;
+    }
+  }
+  .carousel-caption .btn.primary {background-color: rgba(0, 0, 0, 0.4)}
+
+
+  // menu user center
+  .menu-user-center {background-color: @color-pale;}
+
+
+  // appnav
+  .appnav {
+    .nav {
+      > li {
+        > a {
+          &.sub-open {
+            background-color: @color-pale;
+          }
+        }
+        &.active {
+          > a {
+            color: @color-primary;
+            box-shadow: inset 0 -2px 0 @color-primary;
+          }
+        }
+      }
+    }
+
+    > .subnavs {
+      > .nav {
+        > li.active > a {
+          color: @color-primary;
+        }
+      }
+    }
+  }
+
+
+  // tread
+  .thread {
+    .card-heading {
+      background-color: @color-pale;
+
+      &.with-icon {
+        > .icon {
+          color: @color-primary;
+        }
+      }
+
+      > h4 {
+        color: @color-primary;
+      }
+
+      .level-number, .reply-time {
+        color: @color-primary;
+      }
+    }
+  }
+
+  .card.comment {
+    .reply {
+      background-color: @color-pale;
+
+      .reply {
+        background-color: fade(@color-primary, 8%);
+      }
+    }
+  }
+
+  // dropdown
+  .dropdown-menu > .active > a,
+  .dropdown-menu > .active > a:focus,
+  .dropdown-menu > .active > a:hover {
+    background-color: @color-pale;
+  }
+
+
+  // form control
+  .form-control {
+    @color-rgba: rgba(red(@color-primary), green(@color-primary), blue(@color-primary), .6);
+    &:focus {
+      border-color: @color-primary;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px @color-rgba;
+    }
+  }
+
+  // user control nav
+  .nav.user-control-nav > li.active > a {
+    background-color: @color-pale;
+    color: @color-primary;
+    border-color: @color-primary;
+
+    > [class*='icon-'] {color: @color-primary}
+  }
+}
+
+.override-colorset(@color-primary);
+.m-index body {background: #f1f1f1;}
+#appbar {
+  border-bottom: none;
+}
+
+.panel-cards.panel-borderless {
+  border: none;
+
+  .panel-heading, .card {
+    border: none;
+    box-shadow: none;
+  }
+
+  .card {background: transparent;}
+}
+
+.text-price {color: @color-danger;}
+
+.icon-arrow-up::before{content: '\e65c'}
+
+.details-tree {margin: 10px; line-height: 20px;}
+.details-tree, .details-tree ul {padding-left: 0;}
+.details-tree li {list-style: none; padding: 0 0 0 20px; position: relative;}
+.details-tree li > a,
+.details-tree summary {display: block; padding: 5px 0; position: relative; cursor: pointer;}
+.details-tree summary::-webkit-details-marker {display: none;}
+.details-tree summary + ul:before,
+.details-tree li > a:before,
+.details-tree summary:before {content: ' '; display: block; width: 14px; height: 14px; line-height: 12px; text-align: center; position: absolute; left: -20px; top: 8px; background: #ccc; border-radius: 50px; color: #fff;}
+.details-tree li > a:before {background: transparent; border: 2px solid #ccc;}
+.details-tree summary:before {content: '+';}
+.details-tree summary + ul:before {left: 0; content: '-'; pointer-events: none;}
+.details-tree summary:hover:before,
+.details-tree summary:hover + ul:before {background: #bbb;}
+.details-tree summary + ul > li:before {content: ' '; display: block; position: absolute; left: -14px; top: 15px; width: 15px; border-top: 1px dashed #ccc;}
+.details-tree summary + ul > li:after {content: ' '; display: block; position: absolute; left: -14px; top: -8px; bottom: -15px; border-left: 1px dashed #ccc;}
+.details-tree summary + ul > li:last-child:after {display: none;}
+
+.m-index body {background: @color-canvas;}
+
+.appnav > .mainnav > .nav > li > a.sub-open > .icon-caret-down {color: @color-primary;}
+.appnav > .mainnav > .nav > li.active > a {color: @color-primary;}
+.appnav > .mainnav > .nav > li.active > a:before {background-color: @color-primary; background-image: @img-gradient;}
+.appnav > .subnavs > .nav > li.active > a {background: @color-pale;}
+.appbar .nav-icons > li.active > a {color: @color-primary;}
+
+.panel > .panel-heading > strong {border-left-color: @color-primary;}
+
+.carousel-indicators li.active {background: @color-primary;}

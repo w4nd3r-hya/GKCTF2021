@@ -1,0 +1,26 @@
+.chart-canvas{margin:10px;}
+#switchBar {padding-top:10px;}
+#switchBar label{margin: 0 5px; font-weight:normal; cursor:pointer; color:blue;}
+#switchBar label.active{color:#333; font-weight:bold;}
+
+.table-report{ border:1px solid #ddd !important; }
+#reportData{ margin-top:10px;}
+#reportData thead tr td { font-weight:bold; background:#EFEFEF;}
+
+.lineTypeBar{ padding: 20px;}
+
+.table tr td.baidu{background:#FFF0D5;}
+.table tr td.bing{background:#DDF3F5;}
+.table tr td.google{background:#FFFFFF;}
+.table tr td.haosou{background:#FFFFFF;}
+.table tr td.sogou{background:#F5F5F5}
+.pd-l0{padding-left:0}
+
+#typeMenu {padding-right:20px;}
+#typeMenu li a{padding:5px;}
+#typeMenu li.active a{ background:none; color:blue; font-weight:bold;}
+
+.close { float: none; }
+.panel-heading{padding-bottom: 9px;}
+.nav-tabs .table{margin-bottom: 0;}
+#typeNav{border-bottom: none;}

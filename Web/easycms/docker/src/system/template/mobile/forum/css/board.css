@@ -1,0 +1,26 @@
+.panel-section {background: #f5f5f5;}
+.thread-list .thread {padding: 16px 10px; border-radius: 3px; margin: 12px 0; background: #ffffff;}
+.thread-list .thread span {word-break: break-all;}
+.thread-list .thread .header {display: flex; display: -webkit-flex; align-items: flex-start; justify-content: space-between;}
+.thread-list .thread .header .left {display: inline-flex;}
+.thread-list .thread .header .title {overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; font-size: 16px; font-weight: bold; width: 261px;}
+.thread-list .thread .header .operations .trigger {display: flex; height: 24px; border-radius: 1px; align-items: center; margin: auto 0; justify-content: center; vertical-align: middle;}
+.thread-list .thread .header .operations .trigger.active {background-color: #E6EDFF;}
+.thread-list .thread .header .operations .trigger .circle {background-color: #D8D8D8; width: 4px; height: 4px; margin: 0 3px;}
+.thread-list .thread .header .operations .trigger.active .circle {background-color: #3C77FE;}
+.thread-list .thread .header .operations .options {display: flex; flex-direction: column; line-height: 24px; margin-top: 6px; box-shadow: 0 0 8px #000000; background-color: #ffffff; font-size: 12px; padding: 6px 12px; min-width: 82px; border-radius: 3px; position: absolute; right: 22px;}
+.thread-list .thread .content {display: flex; display: -webkit-flex; justify-content: space-between; margin-top: 12px; height: 78px;}
+.thread-list .thread .content .left {display: flex; display: -webkit-flex; flex-direction: column; justify-content: space-between;}
+.thread-list .thread .content .desc {overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; font-size: 12px; width: 205px;}
+.thread-list .thread .content .desc img {display: none;}
+.thread-list .thread .content .ext {height: 12px; font-size: 12px}
+.thread-list .thread .content .ext .views img {height: 12px; width: 12px}
+.thread-list .thread .content .ext .pub-time {margin-left: 20px;}
+.thread-list .thread .content .img {width: 104px;}
+.thread-list .thread .content .img img {width:100%; height:100%;}
+.thread-list .thread .content-no-img {display: flex; display: -webkit-flex; justify-content: space-between; margin-top: 12px; height: 58px;}
+.thread-list .thread .content-no-img .desc-no-img {overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; font-size: 12px;}
+.thread-list .thread .content-no-img .left {display: flex; display: -webkit-flex; flex-direction: column; justify-content: space-between;}
+.thread-list .thread .content-no-img .ext {height: 12px; font-size: 12px}
+.thread-list .thread .content-no-img .ext .views img {height: 12px; width: 12px}
+.thread-list .thread .content-no-img .ext .pub-time {margin-left: 20px;}

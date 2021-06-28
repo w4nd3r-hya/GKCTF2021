@@ -1,0 +1,27 @@
+#industryBox {padding: 10px; background: #f9f9f9; font-size: 12px;}
+#industryBox > .tree {margin: 0;}
+#industryBox > .tree > li {display: inline-block; padding-bottom: 0; margin-right: 10px; padding: 0;}
+#industryBox > .tree > li:before {display: none}
+#industryBox > .tree > li > a {display: inline-block; background-color: transparent; padding: 3px; color: #353535;}
+#industryBox > .tree > li.active > a {font-weight: bold; color: #2286d2;}
+
+#byindustry.open > .icon-angle-down:before {content: '\e6e2'}
+
+#storeThemes {padding: 0; margin: 0 -15px;}
+.themes .col-theme {float: left; width:25%; padding: 0 15px;}
+.themes .theme {cursor: pointer; margin:0 auto 20px; border: 1px solid #ccc; border-radius: 2px; min-width: 200px; position: relative; opacity: 0.9; overflow: hidden; background: #fff;}
+.themes .theme-img {height: 170px; overflow: hidden; opacity: 0.9; border-bottom: 1px solid #ddd;}
+.themes .theme:hover .theme-img {opacity: 1;}
+.theme > .btn-custom {position: absolute; display: none; opacity: 0; width: 90px; left: 20px; top: 23px; z-index: 10; color: #fff!important}
+.themes .theme.current > .btn-custom {opacity: 1; display: block;}
+.themes .theme > .icon {position: absolute; right: 0; top: 0; display: none; z-index: 10}
+.themes .theme.current > .icon {position: absolute; right: 0; top: 0; display: block; color: #fff; background: none; width: 0; height: 0; border: 20px solid #229F24; border-left-color: transparent; border-bottom-color: transparent;}
+.themes .theme.current > .icon:before {position: absolute; right: -15px; top: -15px}
+.themes .theme:hover {border-color: #145ccd; -moz-box-shadow:0px 0px 6px #145ccd; -webkit-box-shadow:0px 0px 6px #145ccd; box-shadow:0px 0px 6px #145ccd;}
+.themes .theme.current {border-color: #47A447; -moz-box-shadow:0px 0px 6px #47A447; -webkit-box-shadow:0px 0px 6px #47A447; box-shadow:0px 0px 6px #47A447; opacity: 1}
+
+.theme-desc {padding: 5px 90px 0 8px; position: relative;}
+.theme-desc > .pull-right {position: absolute; right: 8px; font-size: 12px; top: 5px;}
+.theme-name {font-weight: bold; color: #353535;}
+.theme-price {padding: 3px 70px 5px 8px; position: relative;}
+.theme-price > .actions {position: absolute; right: 8px; top: 0;}

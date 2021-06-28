@@ -1,0 +1,73 @@
+.vertical-center {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+
+.horizontal-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.article {
+    margin-top: 13px;
+}
+
+.article-author {
+    margin-top: 12px;
+}
+
+.article-title h2 {
+    margin: auto;
+    width: 331px;
+}
+
+.article-detail {
+    padding: 25px 12px 12px 12px;
+}
+
+.avatar img {
+    border-radius: 3px;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+}
+
+.avatar i {
+    border-radius: 3px;
+    margin-right: 10px;
+    font-size: 40px;
+}
+
+.article-ext {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.authorName {
+    color: #333333;
+    font-size: 16px;
+}
+
+.addedDate {
+    color: #999999;
+    font-size: 13px;
+}
+
+.article-content-section img{
+    border-radius: 5px;
+}
+
+.commentBox .panel{
+    border-radius: 0;
+}
+
+.commentBox .panel-section{
+    margin: 0;
+}
+
+.commentBox hr{
+    border: none;
+}

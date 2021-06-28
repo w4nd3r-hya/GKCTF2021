@@ -1,0 +1,70 @@
+<html>
+<head>
+  <title>LOLCAT CLOCK</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Covered+By+Your+Grace" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:800" rel="stylesheet">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>WELCOME!!!</h1>
+    </header>
+
+    <h4>It' s Your Monsters</h4>
+    
+      <blockquote id="timeEvent"><%= board[username].name %>!!!</blockquote>
+    
+
+    <img id="lolcatImage" src="<%= board[username].URL %>" alt="lolcat">
+
+
+    <br>
+    <br>
+    ATK: <%=board[username].ATK %>
+    <br>
+    DEF: <%=board[username].DEF %>
+   <h4>Don'like DRAGON?</h4>
+    <form id="monsterInfo" class="monsterInfo">
+      <input type="text" name="name" placeholder="name"  />
+      <input type="text" name="ATK" placeholder="ATK" />
+      <input type="text" name="DEF" placeholder="DEF" />
+      <input type="text" name="URL" placeholder="PicURL" />
+      <button id="partyTimeButton" >DIV Monster By Youself</button>
+  </form>
+  
+    <footer>
+      <p>&copy;BY A NEET  qaq</p>
+    </footer>
+  </div>
+
+  <script type="text/javascript">
+  	 $("#partyTimeButton").click(function() {
+       
+        event.preventDefault();
+        var formObject = {};
+        var formArray =$("#monsterInfo").serializeArray();
+        $.each(formArray,function(i,item){
+            formObject[item.name] = item.value;
+        });
+        $.ajax({
+            url:"/adminDIV",
+            type:"post",
+            data: "data="+JSON.stringify(formObject),
+            dataType: "json",
+            
+            success:function(data){
+                alert(data.msg);
+                location.reload();
+            },
+            error:function(e){
+              // alert(e);
+                alert("something error!!");
+            }
+        });
+      })
+  </script>
+</body>
+</html>

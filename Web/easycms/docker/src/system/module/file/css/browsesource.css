@@ -1,0 +1,44 @@
+/* Files list */
+#imageView {padding: 8px}
+
+.files-list {display: block; padding: 0; margin: 0}
+.files-list > li {position: relative; display: block; float: left; padding: 0; margin: 5px; position: relative; border: 1px solid #ddd; width: 200px}
+.files-list > li > a {display: block; height: 140px; min-width: 150px; line-height: 140px; padding: 3px; max-width: 400px; overflow: hidden; text-align: center;background-color: #fff; opacity: 0.9; }
+.files-list > li > a:hover {opacity: 1; box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3); border-color: #ccc; color: #506EAF;text-decoration: none;}
+.files-list > li > a > img, .files-list > li > a > img:hover{max-width: 200px; max-height: 140px; box-shadow: none; margin: 0}
+.files-list:empty {display: none;}
+.files-list > li.file > a {line-height: 25px; padding: 40px 15px 5px 15px; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;}
+.files-list > li.file > a:before {display: block; width: 100%; font-size: 30px; position: absolute; top: 10px; text-align: center; left: 0; content: '\e6d4'; font-family: ZenIcon;}
+.files-list > li.files-list-heading {float: none; display: block; color: #999;font-weight: bold;}
+.files-list > li .file-actions {position: absolute; right: 0; top: 0; filter:alpha(opacity=0); opacity: 0} 
+.files-list > li:hover .file-actions {filter:alpha(opacity=100); opacity: 1}
+.files-list > li .file-actions > a {display: block; float: left; background-color: #D9E8F5; color: #666; padding: 3px 0; width: 28px; text-align: center; color: #145BCC}
+.files-list > li .file-actions > a:hover {background-color: #145BCC; color: #fff; text-decoration: none;}
+
+.files-list > li.file.file-zip > a{height: 140px; line-height: 100px; padding: 40px 0 0 0; max-width: 400px;}
+.files-list > li.file.file-zip > a:before, .files-list > li.file.file-rar > a:before {content: '\e751';}
+.files-list > li.file.file-doc > a{height: 140px; line-height: 100px; padding: 40px 0 0 0; max-width: 400px;}
+.files-list > li.file.file-doc > a:before {content: '\e72c';}
+
+.panel-actions .btn-group > .btn.active {color: #145BCC; background-color: #fff; border-color: #145BCC}
+
+.file-source {display: block; color: #666; text-align: left; margin: 0; line-height: 20px; background:#EBF2F9;}
+.file-source .input-group {width: auto; margin: 0 -1px -1px -1px; z-index: 2}
+.copyBtn {padding-left: 8px; padding-right: 8px;}
+.noflashTip > .popover-content{z-index:1000;width:205px;}
+
+.row-main{background-color:#e2e2e2;padding:0}
+.panel {margin:0 40px;}
+.panel #listView{margin:15px;}
+.panel table th{background-color:#fff !important;border-top:1px solid #ddd}
+.panel table tfoot td{border:none}
+.panel .panel-heading{background-color:#fff;border:none;margin:10px 0 -15px 0}
+.panel .panel-heading .btn-group a{text-decoration:none;}
+.panel .panel-heading .btn-group .active .icon{color:#000}
+.panel .panel-heading .btn-group a:last-child{padding-left:10px}
+.panel .panel-heading .btn-group .icon{font-size:25px;color:#9b9a9b}
+.panel .radius-btn{text-decoration:none;border:1px solid #ccc;border-radius:6px;font-size:14px;color:#000;margin-left:8px}
+
+#imageView .pager{margin:0px;}
+
+body > .navbar-nav {position: absolute; right: 0; top: 0; z-index: 10;}

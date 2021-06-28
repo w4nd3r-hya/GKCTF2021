@@ -1,0 +1,48 @@
+version: '3'
+services:
+  nginx_1_17_6:
+    build: 
+      context: nginx/
+      dockerfile: Dockerfile
+    ports:
+      - "7000:80"
+    depends_on:
+      - weblogic
+      - mongodb
+    links:
+      - weblogic
+      - mongodb
+    privileged: true
+    #command: /usr/sbin/init
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup
+    tty: true
+    networks:
+      ctf:
+        ipv4_address: 172.16.0.3
+  mongodb:
+    image: mongo:4.0-xenial
+    ports:
+      - "27017:27017"
+    networks:
+      ctf:
+        ipv4_address: 172.16.0.4
+  weblogic:
+    restart: always
+    build:
+      context: weblogic/
+      dockerfile: Dockerfile
+      args:
+        JDK_PKG: jdk-8u191-linux-x64.tar.gz
+        WEBLOGIC_JAR: fmw_12.2.1.4.0_wls.jar
+    networks:
+      ctf:
+        ipv4_address: 172.16.0.2
+        
+          
+networks:
+  ctf:
+    ipam:
+      config:
+      - subnet: 172.16.0.0/16
+

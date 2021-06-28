@@ -1,0 +1,107 @@
+$hover_top: 80px;
+$hover_bottom: 30px;
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: #2a88c5 url(http://zmwlt.com/bucket/cz-20150128-what-color-2-bg.jpg) center center / 70%;
+    position: relative;
+}
+
+#robot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    max-width: 50vw;
+    max-height: 80vh;
+    margin: 0 auto;
+}
+
+#body {
+    animation: hover 1.1s ease-in-out 0s infinite alternate
+}
+
+#head {
+    animation: hover 1.1s ease-in-out 0.05s infinite alternate
+}
+
+#arms {
+    animation: hover 1.1s ease-in-out 0.1s infinite alternate
+}
+
+#left_arm {
+    transform-origin: center right;
+    animation: arms_bounce_left 1.1s ease-in-out 0s infinite alternate
+}
+
+#right_arm {
+    transform-origin: center left;
+    animation: arms_bounce_right 1.1s ease-in-out 0s infinite alternate
+}
+
+#eyes ellipse {
+    transform-origin: center center;
+    animation: eyes_blink 2s ease-out 0s infinite alternate
+}
+
+#shadow {
+    transform-origin: center center;
+    animation: shadow 1.1s ease-in-out 0s infinite alternate
+}
+
+// ---- Animations
+@keyframes hover {
+    0% {
+        transform: translate3d(0, $hover_top, 0)
+    }
+    100% {
+        transform: translate3d(0, $hover_bottom, 0)
+    }
+}
+
+@keyframes shadow {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1.5, 1.2);
+        opacity: 0.4;
+    }
+    100% {
+        transform: translate3d(0, 0, 0) scale(1, 1);
+        opacity: 0.2;
+    }
+}
+
+@keyframes arms_bounce_left {
+    0% {
+        transform: translate3d(0, $hover_top, 0)rotate(0deg)
+    }
+    100% {
+        transform: translate3d(0, $hover_bottom, 0)rotate(-10deg)
+    }
+}
+
+@keyframes arms_bounce_right {
+    0% {
+        transform: translate3d(0, $hover_top, 0)rotate(0deg)
+    }
+    100% {
+        transform: translate3d(0, $hover_bottom, 0)rotate(10deg)
+    }
+}
+
+@keyframes eyes_blink {
+    0% {
+        transform: scale(1, 1)
+    }
+    90% {
+        transform: scale(1, 1)
+    }
+    95% {
+        transform: scale(0.8, 0)
+    }
+    100% {
+        transform: scale(1, 1)
+    }
+}

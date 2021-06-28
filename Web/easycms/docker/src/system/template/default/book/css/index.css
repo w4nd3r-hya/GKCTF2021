@@ -1,0 +1,5 @@
+.card{position: relative; height: 230px; margin-bottom: 10px;}
+.card .card-heading{height: 100px; font-size: 15px; white-space: normal; display: table; width: 100%;}
+.card .card-heading a{display: table-cell; vertical-align: middle;}
+.card-content{height: 80px;}
+.card-actions{position: absolute; bottom:5px; right: 5px;}

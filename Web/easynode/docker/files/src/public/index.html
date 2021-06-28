@@ -1,0 +1,95 @@
+
+<link rel="stylesheet" type="text/css" href="index.css">
+<div id="login-button">
+    <img src="https://dqcgrsy5v35b9.cloudfront.net/cruiseplanner/assets/img/icons/login-w-icon.png">
+    </img>
+</div>
+<div id="container">
+    <h1>登陆</h1>
+    <span class="close-btn">
+        <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
+    </span>
+
+    <form id="userInfo">
+        <input type="email" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <a id="login">登陆</a>
+        <!-- <div id="remember-container">
+            <input type="checkbox" id="checkbox-2-1" class="checkbox" checked="checked" />
+             <span id="remember">Remember me</span>
+            <span id="forgotten">Forgotten password</span> 
+        </div> -->
+    </form>
+</div>
+
+<!-- Forgotten Password Container -->
+<div id="forgotten-container">
+    <h1>Forgotten</h1>
+    <span class="close-btn">
+        <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
+    </span>
+
+    <form>
+        <input type="email" name="email" placeholder="E-mail">
+        <a href="#" class="orange-btn">Get new password</a>
+    </form>
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script>
+    $('#login-button').click(function () {
+        $('#login-button').fadeOut("slow", function () {
+            $("#container").fadeIn();
+            TweenMax.from("#container", .4, { scale: 0, ease: Sine.easeInOut });
+            TweenMax.to("#container", .4, { scale: 1, ease: Sine.easeInOut });
+        });
+    });
+
+    $(".close-btn").click(function () {
+        TweenMax.from("#container", .4, { scale: 1, ease: Sine.easeInOut });
+        TweenMax.to("#container", .4, { left: "0px", scale: 0, ease: Sine.easeInOut });
+        $("#container, #forgotten-container").fadeOut(800, function () {
+            $("#login-button").fadeIn(800);
+        });
+    });
+
+    /* Forgotten Password */
+    $('#forgotten').click(function () {
+        $("#container").fadeOut(function () {
+            $("#forgotten-container").fadeIn();
+        });
+    });
+
+    $('#login').click(
+        function(){
+            event.preventDefault();
+            var formObject = {};
+            var formArray =$("#userInfo").serializeArray();
+            $.each(formArray,function(i,item){
+                formObject[item.name] = item.value;
+            });
+            // console.log(formObject);
+            $.ajax({
+                url: '/login',
+                type: 'post',
+                contentType: 'application/x-www-form-urlencoded',
+                data: formObject,
+
+                success(data){
+                    if(data?.msg ==="yes"){
+                        console.log(data);
+                        $.cookie('token', data?.token);
+                        window.location.href = './admin';
+                    }
+                    else{
+                    alert(data.msg);
+                    }
+                },
+                error:function(e){
+                    alert("错误！！");
+                }
+            })
+        }
+    );
+
+</script>

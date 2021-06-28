@@ -1,0 +1,14 @@
+$(document).ready(function()
+{
+    $('[name=fullScreen]').click(function()
+    {
+        if($('#fullScreen2').prop('checked'))
+        {
+            $('.chapter').show();
+        }
+        else
+        {
+            $('.chapter').hide();
+        }
+    })
+})
